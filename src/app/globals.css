@@ -1,0 +1,406 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+* {
+  color: #404040;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF !important;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Nunito Sans', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.swal2-container .swal2-popup .swal2-actions button {
+  font-family: 'Nunito Sans', sans-serif !important;
+}
+
+.swal2-container .swal2-popup .swal2-icon .swal2-icon-content {
+  color: #f8bb86 !important;
+}
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fff;
+  font-size: 1.5rem;
+  z-index: 9999;
+}
+
+table thead tr th {
+  text-transform: uppercase;
+}
+
+table thead tr th, 
+table tbody tr td,
+table tbody tr td span {
+  font-family: 'Nunito Sans', sans-serif !important;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #404040;
+  vertical-align: baseline !important;
+}
+
+table tbody tr td.active span,
+table tbody tr td.paid span,
+table tbody tr td.completed span {
+  padding: 5px 6px;
+  border-radius: 4.5px;
+  background-color: rgba(0, 182, 155, 0.2);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: #00B69B;
+}
+
+table tbody tr td.inactive span,
+table tbody tr td.scheduled span,
+table tbody tr td.unpaid span  {
+  padding: 5px 6px;
+  border-radius: 4.5px;
+  background-color: rgba(239, 56, 38, 0.2);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: #EF3826;
+}
+
+table tbody tr td.for-release span,
+table tbody tr td.for.release span {
+  padding: 5px 6px;
+  border-radius: 4.5px;
+  background-color: rgba(255, 123, 0, 0.2);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: #FF7B00;
+}
+
+table tbody tr td.unassigned span,
+table tbody tr td.pending span {
+  padding: 5px 6px;
+  border-radius: 4.5px;
+  background-color: rgba(0, 0, 0, 0.222);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+table tbody tr td.uploaded span {
+  padding: 5px 6px;
+  border-radius: 4.5px;
+  background-color: rgba(215, 230, 6, 0.2);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: #D7E606;
+}
+
+table tbody tr td.editing span,
+table tbody tr td.for.edit span,
+table tbody tr td.partial span {
+  padding: 5px 6px;
+  border-radius: 4.5px;
+  background-color: rgba(55, 73, 166, 0.2);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: #3749A6;
+}
+
+hr {
+  border: 1px solid #E0E0E0;
+  margin: 0 30px;
+  width: 100%;
+}
+
+.MuiPickersArrowSwitcher-rightArrowIcon,
+.MuiPickersArrowSwitcher-leftArrowIcon {
+  background: #E7E9EE;
+  border-radius: 3px;
+}
+
+.MuiPickersCalendarHeader-switchViewButton {
+  display: none !important;
+}
+
+.MuiPickersArrowSwitcher-button {
+  background-color: transparent !important;
+}
+
+.disabled-day {
+  background-color: #f5f5f5 !important;
+  color: #ccc !important;
+  pointer-events: none;
+}
+
+.rbc-month-view .disabled-day {
+  background-color: #f5f5f5 !important;
+}
+
+.rbc-day-bg.disabled-day {
+  background-color: #f5f5f5 !important;
+}
+
+.no-events {
+  color: #666;
+  font-style: italic;
+  padding: 10px;
+}
+
+input.error {
+  border-color: red;
+}
+
+.rbc-header {
+  background-color: #F1F4F9;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px 0 !important;
+  border-bottom: 1px solid #ddd;
+}
+
+.rbc-month-view {
+  border-radius: 12px 12px 0 0;
+}
+
+.rbc-month-header {
+  border-radius: 12px 12px 0 0;
+}
+
+.rbc-month-header .rbc-header:first-child {
+  border-radius: 12px 0 0 0;
+}
+
+.rbc-month-header .rbc-header:last-child {
+  border-radius: 0 12px 0 0;
+}
+
+.dropdown {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 4px;
+  border: 0.6px solid #D5D5D5;
+  background: #F7FAF5;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.form-group .label {
+  color: #ADADAD;
+}
+
+.dropdown span {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #202224;
+  text-wrap: nowrap;
+}
+
+.dropdown img.rotated {
+  transform: rotate(180deg);
+}
+
+.rbc-event {
+  background-color: transparent !important;
+}
+
+.swal-overlay {
+  z-index: 100 !important;
+}
+
+.swal-popup {
+  z-index: 100 !important;
+}
+
+form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  background: #2BB673;
+  font-family: "Nunito Sans", sans-serif !important;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.07px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: none !important;
+  text-transform: capitalize !important;
+}
+
+.billing-view-button {
+  background: #FAFBFD !important;
+  border: 0.6px solid #D5D5D5 !important;
+  border-radius: 8px !important;
+  font-family: "Nunito Sans", sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 12px !important;
+  text-align: center !important;
+  color: #000000 !important;
+  text-transform: capitalize !important;
+  appearance: none !important;
+  cursor: pointer !important;
+}
+
+.billing-view-button:hover {
+  background: #D5D5D5 !important;
+  color: #000000 !important;
+  text-decoration: underline !important;
+}
+
+/* Table Pagination */
+.table-pagination .MuiTablePagination-toolbar {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.table-pagination .MuiTablePagination-toolbar .MuiTablePagination-spacer {
+  display: none;
+}
+
+.table-pagination .MuiTablePagination-toolbar p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #202224;
+}
+
+.table-pagination .MuiTablePagination-toolbar .MuiTablePagination-select .MuiSelect-standard {
+  background: #fff;
+  padding: 10px 25px 10px 5px;
+  border: 0.3px solid rgb(213, 213, 213);
+  border-radius: 5px;
+}
+
+.table-pagination .MuiTablePagination-toolbar .MuiTablePagination-actions {
+  margin-left: auto;
+}
+
+.table-pagination .MuiTablePagination-toolbar .MuiTablePagination-actions button {
+  appearance: none;
+  outline: none;
+  border: 0.6px solid #D5D5D5;
+  background: #FAFBFD;
+  padding: 3px 10px;
+}
+
+.table-pagination .MuiTablePagination-toolbar .MuiTablePagination-actions button.Mui-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.table-pagination .MuiTablePagination-toolbar .MuiTablePagination-actions #pagination-prev-button {
+  border-radius: 8px 0px 0px 8px;
+  border-right: none;
+}
+
+.table-pagination .MuiTablePagination-toolbar .MuiTablePagination-actions #pagination-next-button {
+  border-radius: 0px 8px 8px 0px;
+}
+
+/* Calendar Toolbar */
+.rbc-toolbar {
+  gap: 15px;
+}
+
+.custom-swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-swiper-prev,
+.custom-swiper-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-swiper-prev {
+  left: 20px;
+}
+
+.custom-swiper-next {
+  right: 20px;
+}
+
+.custom-swiper-prev:hover,
+.custom-swiper-next:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
